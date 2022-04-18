@@ -1,8 +1,6 @@
-import {Box, makeStyles, Tab, Tabs} from '@material-ui/core'
+import {Box, makeStyles} from '@material-ui/core'
 import logo from '../images/bg.jpg'
-import Information from './Information';
 import Form from './Form';
-import Contact from './Contact';
 import * as React from 'react';
 import About from './AboutUs';
 
