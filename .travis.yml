@@ -6,15 +6,18 @@ sudo: false
 
 script:
     - npm test
+    -npm install
     - npm run build
 
-
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
+  
 cache:
   directories:
     - node_modules
 
 install:
-  - npm install
+  - npm install -g firebase tools
 
 deploy:
   provider: firebase
