@@ -6,7 +6,7 @@ script:
 - cd functions && npm install
 - npm run build
 - gem install dpl
-- git add . && git commit -m 'deploy'
+
 after_success:
 - firebase deploy --only hosting,functions --token $FIREBASE_TOKEN
 cache:
