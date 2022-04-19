@@ -24,7 +24,6 @@ const useStyles = makeStyles({
 })
 
 const Form = () =>{
-    const classes = useStyles();
     const [data , getWeatherData ] = useState();
     const [city ] = useState("Toronto ");
     const [country ] = useState("CA");
@@ -34,7 +33,7 @@ const Form = () =>{
     useEffect(()=>{
         
         const getWeather = async() =>{
-            city &&     await getData(city,country).then(response =>{
+            city && await getData(city,country).then(response =>{
                 getWeatherData(response.data)
                 console.log(response.data)
             })

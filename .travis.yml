@@ -1,9 +1,8 @@
 language: node_js
+warnings_are_errors: false
 
 node_js:
   - "16.13.1"
-
-sudo: false
 
 script:
     - npm test
