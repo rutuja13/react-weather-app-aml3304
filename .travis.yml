@@ -25,4 +25,4 @@ deploy:
   project: "react-wearther-app-aml3304"
   on:
     branch: main
-  cleanup: flase
+  cleanup: false
