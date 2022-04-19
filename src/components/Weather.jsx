@@ -2,7 +2,6 @@ import {Box, makeStyles} from '@material-ui/core'
 import logo from '../images/bg.jpg'
 import Form from './Form';
 import * as React from 'react';
-import About from './AboutUs';
 
 
 
@@ -40,11 +39,6 @@ const useStyles = makeStyles({
 
 const Weather = () =>{
     const clases = useStyles();
-    const [value, setValue] = React.useState(0);
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
   
     return(
         <Box className={clases.component}>

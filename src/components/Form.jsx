@@ -1,4 +1,4 @@
-import { Box, Button, TextField , makeStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import React from "react";
 import { useEffect, useState } from "react";
 import {getData} from "../service/api"
@@ -26,8 +26,8 @@ const useStyles = makeStyles({
 const Form = () =>{
     const classes = useStyles();
     const [data , getWeatherData ] = useState();
-    const [city , setCity] = useState("Toronto ");
-    const [country , setCountry] = useState("CA");
+    const [city ] = useState("Toronto ");
+    const [country ] = useState("CA");
     const [click,handleClick] = useState(true);
     
 

@@ -1,4 +1,4 @@
-import { Box , Typography , makeStyles, Tab, Tabs} from "@material-ui/core"
+import { Box , Typography , makeStyles} from "@material-ui/core"
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import OpacityIcon from '@material-ui/icons/Opacity';
@@ -8,7 +8,7 @@ import DehazeIcon from '@material-ui/icons/Dehaze';
 import CloudIcon from '@material-ui/icons/Cloud';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { format } from 'date-fns';
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 
 const useStyles = makeStyles({
@@ -41,7 +41,7 @@ const Information = ({ data }) =>{
       }
     
       React.useEffect(() => {
-        const interval = setInterval(() => {
+        setInterval(() => {
           updateTime();
         }, 1000);
     })
