@@ -20,9 +20,9 @@ install:
 
 deploy:
   provider: firebase
+  cleanup: false
   token:
   secure: '1//04XizCHkED4aaCgYIARAAGAQSNwF-L9IrkUkTdEeLwdgX_rG_92IRuyyNAZf1iIgbe9_FFJVGty4HYX0hhUv5htGGQafNuzxIpjE'
   project: "react-wearther-app-aml3304"
   on:
     branch: main
-  cleanup: false
