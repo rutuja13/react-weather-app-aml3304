@@ -2,7 +2,24 @@ language: node_js
 
 node_js:
   - "17.8.0"
+sudo: false
 
 script:
     - npm test
     - npm run build
+
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm install
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  keep-history: true
+  api-key:
+    secure: $HEROKU_API_KEY
+  app: react-weather-app-aml3304
