@@ -6,9 +6,10 @@ script:
 - cd functions && npm install
 - npm run build
 - gem install dpl
+- git stash --all
 
 after_success:
-- firebase deploy --only hosting,functions --token $FIREBASE_TOKEN
+- firebase deploy --token $FIREBASE_TOKEN
 cache:
   directories:
   - node_modules
