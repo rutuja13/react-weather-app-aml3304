@@ -22,7 +22,7 @@ deploy:
   provider: firebase
   skip_cleanup: true
   token:
-  secure: $FIREBASE_TOKEN
+  secure: '1//04XizCHkED4aaCgYIARAAGAQSNwF-L9IrkUkTdEeLwdgX_rG_92IRuyyNAZf1iIgbe9_FFJVGty4HYX0hhUv5htGGQafNuzxIpjE'
   project: "react-wearther-app-aml3304"
   on:
     branch: main
