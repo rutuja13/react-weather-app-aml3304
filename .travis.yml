@@ -3,10 +3,12 @@ node_js:
 - 16.13.1
 script:
 - npm test
-- npm install
+- cd functions && npm install
 - npm run build
+- gem install dpl
+- git add .
 after_success:
-- firebase deploy --token $FIREBASE_TOKEN
+- firebase deploy --only hosting,functions --token $FIREBASE_TOKEN
 cache:
   directories:
   - node_modules
@@ -18,7 +20,6 @@ deploy:
   edge: true
   token:
     secure: mU2OFeRtgBfjbVAsej96G0g1fNbgz6DSg++M1pX9xPonm9zzLvJSa3tVsYGJISJfPC5N8nJb1ltabBTnG93qh0At0pzjFiwSP3va7COn9nLd7Zh7de7GMiNoyiGhyTXOUnZklu2yESFeIpeojMg6Mp8Xe9P6yoXLOWWxmWUf3yEN1q9b7jwBMFQApmUOsxHSyYgUHjTwr2855iQnqYWVhlhNFfA5ae2pj0rUmidGeBzIg7cCgF6q2PqozpHBYrB6Ps5GjcANR6eG9/nK5sjKzwHmpxPjz1UWz3VCXUAEIIv/MNMNGhN3/GI6VNmx6Lc/UoWBzQ4gi9gjpHEVTXomRYqSJnfOb4LUCn0l7pfH3Ybe1F5aG2mXnPcEhnhzrlNmwdKiFXdsVqsw32QSV1FRLEYRw64xCf7efWa0cZywiKI0jmH6ig8jZ+fX3n0IgJGY4NEA4nRkPNo+tJQuoF2yyBFl/H8Wh+UzeYRxB9I3c18d6TxxPdfa29fm8C61bNrp77WgWZabJc03LeArU81Hue9bhucOTLAEQKqiYovM9QP2njSSxhtGVBnEXNtM412xk7kX8TZRMaJp4Y9v2pgP2UgsIShTBdPVzQRDC6US95TIZxC3tiU4FklEYYzbICBept4tARTKeOXNfNjlk4+9gNvfkAxKThTx2FYKTmx/ACI=
-  project: react-wearther-app-aml3304
   on:
     branch: main
 env:
