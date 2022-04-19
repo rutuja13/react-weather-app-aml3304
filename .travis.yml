@@ -6,7 +6,7 @@ sudo: false
 
 script:
     - npm test
-    -npm install
+    - npm install
     - npm run build
 
 after_success:
