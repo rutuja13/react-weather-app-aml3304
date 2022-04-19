@@ -21,7 +21,7 @@ install:
 deploy:
   provider: firebase
   token:
-    secure: "1//04FXNXDDae93OCgYIARAAGAQSNwF-L9Irjw2Zq33lm0HhInCzZAIJNLCOuTRlwg_2MuMh5ugomWEf7COeX4ocwiQF01YrsaJOOH4"
+    secure: "1//04XizCHkED4aaCgYIARAAGAQSNwF-L9IrkUkTdEeLwdgX_rG_92IRuyyNAZf1iIgbe9_FFJVGty4HYX0hhUv5htGGQafNuzxIpjE"
   project: "react-wearther-app-aml3304"
   on:
     branch: main
