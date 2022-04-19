@@ -1,7 +1,8 @@
 language: node_js
 
 node_js:
-  - "17.8.0"
+  - "16.13.1"
+
 sudo: false
 
 script:
@@ -9,17 +10,17 @@ script:
     - npm install
     - npm run build
 
-after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
+#after_success:
+ # - firebase deploy --token $FIREBASE_TOKEN
   
 cache:
   directories:
     - node_modules
 
-install:
-  - npm install -g firebase tools
+#install:
+ # - npm install -g firebase tools
 
-deploy:
-  provider: firebase
-  token:
-    secure: "1//04FXNXDDae93OCgYIARAAGAQSNwF-L9Irjw2Zq33lm0HhInCzZAIJNLCOuTRlwg_2MuMh5ugomWEf7COeX4ocwiQF01YrsaJOOH4"
+#deploy:
+ # provider: firebase
+  #token:
+   # secure: "1//04FXNXDDae93OCgYIARAAGAQSNwF-L9Irjw2Zq33lm0HhInCzZAIJNLCOuTRlwg_2MuMh5ugomWEf7COeX4ocwiQF01YrsaJOOH4"
