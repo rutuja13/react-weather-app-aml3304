@@ -1,6 +1,8 @@
-import {Box, makeStyles} from '@material-ui/core';
-import logo from '../images/bg.jpg';
+import {Box, makeStyles} from '@material-ui/core'
+import logo from '../images/bg.jpg'
 import * as React from 'react';
+
+
 
 const useStyles = makeStyles({
   component:{
@@ -13,7 +15,6 @@ const useStyles = makeStyles({
       fontSize : 20 , 
       letterSpacing : 2
 
-      
   },
   leftContainer :{
 
@@ -23,7 +24,6 @@ const useStyles = makeStyles({
       backgroundSize : 'cover',
       borderRadius : '20px 0px 0px 20px'
       
-
   },
   rightContainer:{
       background :'linear-gradient(to right , #e74c3c , #e67e22)',
@@ -32,6 +32,7 @@ const useStyles = makeStyles({
   }
   
 })
+
 
 function About() {
   const clases = useStyles();
