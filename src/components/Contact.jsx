@@ -1,9 +1,8 @@
 import {Box, makeStyles} from '@material-ui/core'
-import logo from '../images/bg.jpg'
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import * as React from 'react';
-
+import logo from '../images/bg.jpg'
 
 
 const useStyles = makeStyles({
@@ -16,7 +15,6 @@ const useStyles = makeStyles({
       padding : 10 ,
       fontSize : 20 , 
       letterSpacing : 2
-
       
   },
   leftContainer :{
@@ -41,23 +39,23 @@ export default function Contact() {
   const clases = useStyles();
   return (
     <Box className={clases.component}>
-        <Box className={clases.leftContainer}>
-        </Box>
-        <Box className = {clases.rightContainer}>
-          <ImageList sx={{ width: 700, height: 600 }} variant="woven" cols={3} gap={8}>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=161&fit=crop&auto=format`}
-                  srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
-        </Box>
+      <Box className={clases.leftContainer}>
       </Box>
+      <Box className = {clases.rightContainer}>
+        <ImageList sx={{ width: 700, height: 600 }} variant="woven" cols={3} gap={8}>
+          {itemData.map((item) => (
+            <ImageListItem key={item.img}>
+              <img
+                src={`${item.img}?w=161&fit=crop&auto=format`}
+                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                alt={item.title}
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
+    </Box>
   );
 }
 
