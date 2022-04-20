@@ -1,8 +1,8 @@
 import * as React from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import {Box, makeStyles} from '@material-ui/core'
-import logo from '../images/bg.jpg'
+import {Box, makeStyles} from '@material-ui/core';
+import logo from '../images/bg.jpg';
 
 const useStyles = makeStyles({
   component:{
